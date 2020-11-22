@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:zoomable_image/zoomable_image.dart';
 
 class TeamMapPage extends StatefulWidget {
   @override

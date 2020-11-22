@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'CalendarScreen.dart';
+import 'EventSceen.dart';
 import 'TeamProfilesScreen.dart';
 import 'TeamMapScreen.dart';
 import 'const.dart';
@@ -62,10 +63,10 @@ class _State extends State<WelcomePage> {
                   top: 425.0,
                   child: TextButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => CalendarPage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => EventPage()));
                     },
                     child: Text('', style: TextStyle(fontSize: 15.0)),
                   )),

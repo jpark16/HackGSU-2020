@@ -61,4 +61,3 @@ class Meeting {
   Color background;
   bool isAllDay;
 }
-
