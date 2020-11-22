@@ -1,6 +1,4 @@
 import "package:flutter/material.dart";
-import 'LoginScreen.dart';
-import 'CalendarScreen.dart';
 import 'WelcomeScreen.dart';
 
 void main() => runApp(MyApp());

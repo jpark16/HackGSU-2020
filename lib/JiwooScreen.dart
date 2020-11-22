@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'Hijri.dart';
+import 'Chuseok.dart';
 import 'const.dart';
 
-class AyaPage extends StatefulWidget {
+class JiwooPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => new _State();
 }
 
-class _State extends State<AyaPage> {
+class _State extends State<JiwooPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,17 +21,19 @@ class _State extends State<AyaPage> {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           fit: BoxFit.fill,
-                          image: AssetImage('assets/img/AAProfile.PNG')))),
-              // hajri
+                          image: AssetImage('assets/img/JPProfile.PNG')))),
+              // chuseok
               Positioned(
                   bottom: 290.0,
-                  left: 235.0,
-                  right: 15.0,
+                  left: 125.0,
+                  right: 125.0,
                   top: 360.0,
                   child: TextButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => HijriPage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ChuseokPage()));
                     },
                     child: Text('', style: TextStyle(fontSize: 15.0)),
                   )),

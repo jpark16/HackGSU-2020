@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'CalendarScreen.dart';
 import 'TeamProfilesScreen.dart';
+import 'TeamMapScreen.dart';
 import 'const.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -9,8 +10,6 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _State extends State<WelcomePage> {
-  Rect calendar = Offset(0.0, 500.0) & Size(200.0, 200.0);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -48,10 +47,10 @@ class _State extends State<WelcomePage> {
                   top: 275.0,
                   child: TextButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => CalendarPage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => TeamMapPage()));
                     },
                     child: Text('', style: TextStyle(fontSize: 15.0)),
                   )),

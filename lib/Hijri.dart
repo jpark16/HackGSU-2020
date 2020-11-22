@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'const.dart';
 
-class NoahPage extends StatefulWidget {
+class HijriPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => new _State();
 }
 
-class _State extends State<NoahPage> {
+class _State extends State<HijriPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,7 +20,7 @@ class _State extends State<NoahPage> {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           fit: BoxFit.fill,
-                          image: AssetImage('assets/img/NGProfile.PNG'))))
+                          image: AssetImage('assets/img/Hijri.png'))))
             ])));
   }
 }
