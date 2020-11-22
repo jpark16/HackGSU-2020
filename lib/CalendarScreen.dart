@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
+import 'const.dart';
 
 class CalendarPage extends StatefulWidget {
   @override
@@ -11,53 +12,63 @@ class _State extends State<CalendarPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(),
-        body: SfCalendar(
-          view: myView,
-        ));
-  }
-}
-
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: HexColor("000080"),
+        ),
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+          ),
         ),
       ),
-    ),
-  );
-}
+    );
+  }
 
-_AppointmentDataSource _getCalendarDataSource() {
-  List<Appointment> appointments = <Appointment>[];
-  appointments.add(Appointment(
-    startTime: DateTime.now(),
-    endTime: DateTime.now().add(Duration(minutes: 10)),
-    subject: 'Meeting',
-    color: Colors.blue,
-    startTimeZone: '',
-    endTimeZone: '',
-  ));
+  _AppointmentDataSource _getCalendarDataSource() {
+    List<Appointment> appointments = <Appointment>[];
 
-  return _AppointmentDataSource(appointments);
+    // chuseok
+    DateTime startTime = DateTime(2020, 9, 21);
+    appointments.add(Appointment(
+      startTime: startTime,
+      endTime: startTime.add(Duration(hours: 23)),
+      subject: 'Chuseok',
+      color: Colors.blue,
+      startTimeZone: '',
+      endTimeZone: '',
+    ));
+
+    // thanksgiving
+    startTime = DateTime(2020, 11, 26);
+    appointments.add(Appointment(
+      startTime: startTime,
+      endTime: startTime.add(Duration(hours: 23)),
+      subject: 'Thanksgiving',
+      color: Colors.orange,
+      startTimeZone: '',
+      endTimeZone: '',
+    ));
+
+    // black friday
+    startTime = DateTime(2020, 11, 27);
+    appointments.add(Appointment(
+      startTime: startTime,
+      endTime: startTime.add(Duration(hours: 23)),
+      subject: 'Black Friday',
+      color: Colors.blue,
+      startTimeZone: '',
+      endTimeZone: '',
+    ));
+
+    return _AppointmentDataSource(appointments);
+  }
 }
 
 class _AppointmentDataSource extends CalendarDataSource {
   _AppointmentDataSource(List<Appointment> source) {
     appointments = source;
   }
-}
-
-class Meeting {
-  Meeting({this.eventName, this.from, this.to, this.background, this.isAllDay});
-
-  String eventName;
-  DateTime from;
-  DateTime to;
-  Color background;
-  bool isAllDay;
 }

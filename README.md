@@ -1,16 +1,22 @@
 # hackgsu_2020
 
-A new Flutter project.
+## 💡 Inspiration 💡 
+A comfortable environment is essential for the success of any team. All members should not only feel respected, but they should also feel welcomed and appreciated. This app allows team members to learn more about each other's backgrounds and culture so that connections can be better formed and positively affect productivity levels.
 
-## Getting Started
+## 🙆‍♂️ What it does 🙆‍♀️
+This app allows a user to join a team and share their background, culture, and other interests. Then, anyone on the team can see on a calendar when a teammate is celebrating a holiday and can learn more about their teammates.
 
-This project is a starting point for a Flutter application.
+## 😤 How we built it 😤
+We built this app by designing screens in Figma, then implementing the screens using Flutter. We compiled the Flutter app to android and ran on our android phones locally.
 
-A few resources to get you started if this is your first Flutter project:
+## 🤔 Challenges we ran into 🤔
+We ran into challenges with showing the events on the calendar and with the positioning of the buttons. 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## 😁 Accomplishments that I'm proud of 😁
+This is our first project with Flutter, so we got to accomplish a lot with a new framework.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🤓 What I learned 🤓
+In this project, we learned a lot about each other's culture and background!
+
+## 🤩 What's next for Momentum 🤩 
+We would like to add database functionality to automatically load event data.

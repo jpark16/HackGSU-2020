@@ -3,6 +3,7 @@ import 'CalendarScreen.dart';
 import 'EventSceen.dart';
 import 'TeamProfilesScreen.dart';
 import 'TeamMapScreen.dart';
+import 'ProfileScreen.dart';
 import 'const.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -63,10 +64,8 @@ class _State extends State<WelcomePage> {
                   top: 425.0,
                   child: TextButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => EventPage()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => EventPage()));
                     },
                     child: Text('', style: TextStyle(fontSize: 15.0)),
                   )),
@@ -82,6 +81,20 @@ class _State extends State<WelcomePage> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => TeamProfilesPage()));
+                    },
+                    child: Text('', style: TextStyle(fontSize: 15.0)),
+                  )),
+              // profile
+              Positioned(
+                  left: 235.0,
+                  right: 15.0,
+                  top: 0.0,
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfilePage()));
                     },
                     child: Text('', style: TextStyle(fontSize: 15.0)),
                   )),

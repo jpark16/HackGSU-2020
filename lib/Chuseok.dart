@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'JiwooScreen.dart';
 import 'const.dart';
 
 class ChuseokPage extends StatefulWidget {
@@ -20,7 +21,19 @@ class _State extends State<ChuseokPage> {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           fit: BoxFit.fill,
-                          image: AssetImage('assets/img/Chuseok.png'))))
+                          image: AssetImage('assets/img/Chuseok.png')))),
+              // jiwoo
+              Positioned(
+                  bottom: 0.0,
+                  left: 0.0,
+                  right: 0.0,
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => JiwooPage()));
+                    },
+                    child: Text('', style: TextStyle(fontSize: 15.0)),
+                  )),
             ])));
   }
 }

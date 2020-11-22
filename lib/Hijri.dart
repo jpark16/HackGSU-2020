@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'const.dart';
+import 'AyaScreen.dart';
 
 class HijriPage extends StatefulWidget {
   @override
@@ -20,7 +21,19 @@ class _State extends State<HijriPage> {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           fit: BoxFit.fill,
-                          image: AssetImage('assets/img/Hijri.png'))))
+                          image: AssetImage('assets/img/Hijri.png')))),
+              // aya
+              Positioned(
+                  bottom: 0.0,
+                  left: 0.0,
+                  right: 0.0,
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => AyaPage()));
+                    },
+                    child: Text('', style: TextStyle(fontSize: 15.0)),
+                  )),
             ])));
   }
 }
